@@ -27,8 +27,8 @@
 					<td>{{produto.quantidade}}</td>
 					<td>{{produto.media}}</td>
 					<td>
-						<button ng-click="editarProduto(produto)" class="btn blue">Editar</button>
-						<button ng-click="deletarProduto(produto)" class="btn red">Deletar</button>
+						<button ng-click="editarProduto(produto)" class="btn blue"><i class="far fa-edit"></i></button>
+						<button ng-click="deletarProduto(produto)" class="btn red"><i class="fas fa-minus-circle"></i></button>
 					</td>
 				</tr>
 			</tbody>
@@ -37,7 +37,7 @@
 
 	<div class="row">
 		<!-- Modal Trigger -->
-  		<a ng-click="abreAddProduto()" class="waves-effect waves-light btn">Adicionar</a>
+  		<a ng-click="abreAddProduto()" class="waves-effect waves-light btn"><i class="far fa-plus-square"></i></a>
 	</div>
 </main>
 
@@ -73,9 +73,9 @@
       </div>
     </div>
     <div class="modal-footer">
-    	<a ng-if="!editando" ng-click="addProduto(Produto)" class="waves-effect waves-light btn blue">Adicionar</a>
-    	<a ng-if="editando" ng-click="salvarProduto(Produto)" class="waves-effect waves-light btn blue">Salvar</a>
-      	<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Cancelar</a>
+    	<a ng-if="!editando" ng-click="addProduto(Produto)" class="waves-effect waves-light btn blue"><i class="far fa-plus-square"></i></a>
+    	<a ng-if="editando" ng-click="salvarProduto(Produto)" class="waves-effect waves-light btn blue"><i class="far fa-save"></i></a>
+      	<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat red "><i class="fas fa-ban"></i></a>
 
     </div>
   </div>
