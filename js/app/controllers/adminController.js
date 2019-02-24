@@ -1,14 +1,4 @@
 angular.module("meuModulo")
-.controller("indexController",function($scope){
-	$scope.titulo = "Home";
-	
-
-
-})
-.controller("carrinhoController",function($scope){
-	$scope.titulo = "Carrinho";
-})
-
 .controller("adminController",function($scope){
 	$scope.titulo = "Admin";
 	$scope.produtos = [
@@ -76,6 +66,4 @@ angular.module("meuModulo")
 	var limpaForm = function(){
 		$scope.Produto = {nome: "",fabricante:"",custo:'',venda:'',quantidade:'',media:''};
 	};
-
-	init();
 })
