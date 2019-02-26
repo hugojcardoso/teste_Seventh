@@ -9,23 +9,19 @@
 		<table class="striped">
 			<thead>
 				<tr>
+					<th>Id</th>
 					<th>Nome</th>
-					<th>Fabricante</th>
-					<th>custo</th>
-					<th>venda</th>
-					<th>quantidade</th>
-					<th>Média</th>
+					<th>Preço</th>
+					<th>Descrição</th>									
 					<th>Ação</th>
 				</tr>
 			</thead>
 			<tbody>
-				<tr ng-repeat="produto in produtos | filter:busca">
-					<td>{{produto.nome}}</td>
-					<td>{{produto.fabricante}}</td>
-					<td>{{produto.custo}}</td>
-					<td>{{produto.venda}}</td>
-					<td>{{produto.quantidade}}</td>
-					<td>{{produto.media}}</td>
+				<tr ng-repeat="product in products | filter:busca">
+					<td>{{product.id}}</td>
+					<td>{{product.name}}</td>
+					<td>{{product.price}}</td>
+					<td>{{product.description}}</td>					
 					<td>
 						<button ng-click="editarProduto(produto)" class="btn blue"><i class="far fa-edit"></i></button>
 						<button ng-click="deletarProduto(produto)" class="btn red"><i class="fas fa-minus-circle"></i></button>
