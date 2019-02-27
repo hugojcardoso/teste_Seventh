@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="css/style.css">
 <div ng-include="'templates/_nav.html'"></div>
 <main class="container">
 	<div class="row">
@@ -6,7 +7,7 @@
 
 	</div>
 	<div class="row">
-		<table class="striped">
+		<table class="striped highlight centered">
 			<thead>
 				<tr>
 					<th>Id</th>
@@ -21,7 +22,7 @@
 					<td>{{product.id}}</td>
 					<td>{{product.name}}</td>
 					<td>{{product.price}}</td>
-					<td>{{product.description}}</td>					
+					<td class="truncate">{{product.description}}</td>					
 					<td>
 						<button ng-click="editarProduto(produto)" class="btn blue"><i class="far fa-edit"></i></button>
 						<button ng-click="deletarProduto(produto)" class="btn red"><i class="fas fa-minus-circle"></i></button>
