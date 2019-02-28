@@ -1,11 +1,35 @@
 <link rel="stylesheet" href="css/style.css">
 <div ng-include="'templates/_nav.html'"></div>
 <main class="container">
-	<div class="row">
-		<br>
-		<input type="text" ng-model="busca.nome" placeholder="Busca">
+	<!-- Add Form -->	
 
-	</div>
+  <!-- Modal Structure -->
+      <!-- <h4 ng-if="!editando">Adicionar Produto</h4>
+      <h4 ng-if="editando">Editar Produto</h4> -->
+      
+      <div class="row">
+      	<div class="input-field col m4 s12">
+          <input type="text" ng-model="Product.name" class="validate" placeholder="Nome">
+          
+        </div>
+        
+        <div class="input-field col m4 s12">
+          <input type="text" ng-model="Product.description" class="validate" placeholder="Descrição">
+          
+        </div>
+        <div class="input-field col m2 s12">
+          <input type="text" ng-model="product.price" class="validate" placeholder="Preço">
+          
+				</div>
+				
+				<div class="col m2 s12">
+					<a ng-if="!editando" ng-click="addProduto(Produto)" class="btn blue"><i class="far fa-plus-square"></i></a>
+					 <!-- <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat red "><i class="fas fa-ban"></i></a> -->
+		
+				</div>
+      </div>
+    </div>
+    
 	<div class="row">
 		<table class="striped highlight centered">
 			<thead>
@@ -37,42 +61,3 @@
   		<a ng-click="abreAddProduto()" class="waves-effect waves-light btn"><i class="far fa-plus-square"></i></a>
 	</div>
 </main>
-
-  
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal modal-fixed-footer">
-    <div class="modal-content">
-      <h4 ng-if="!editando">Adicionar Produto</h4>
-      <h4 ng-if="editando">Editar Produto</h4>
-      <p>Preencha os dados do Produto</p>
-      <div class="row">
-      	<div class="input-field col m6 s12">
-          <input type="text" ng-model="Produto.nome" class="validate" placeholder="Nome">
-          
-        </div>
-        
-        <div class="input-field col m6 s12">
-          <input type="text" ng-model="Produto.fabricante" class="validate" placeholder="Fabricante">
-          
-        </div>
-        <div class="input-field col m4 s12">
-          <input type="text" ng-model="Produto.custo" class="validate" placeholder="custo">
-          
-        </div>
-        <div class="input-field col m4 s12">
-          <input type="text" ng-model="Produto.venda" class="validate" placeholder="venda">
-          
-        </div>
-        <div class="input-field col m4 s12">
-          <input type="text" ng-model="Produto.quantidade" class="validate" placeholder="quantidade">
-          
-        </div>
-      </div>
-    </div>
-    <div class="modal-footer">
-    	<a ng-if="!editando" ng-click="addProduto(Produto)" class="waves-effect waves-light btn blue"><i class="far fa-plus-square"></i></a>
-    	<a ng-if="editando" ng-click="salvarProduto(Produto)" class="waves-effect waves-light btn blue"><i class="far fa-save"></i></a>
-      	<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat red "><i class="fas fa-ban"></i></a>
-
-    </div>
-  </div>
