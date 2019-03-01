@@ -5,8 +5,16 @@ angular.module("meuModulo")
 
 
 })
-.controller("carrinhoController",function($scope){
-	$scope.titulo = "Carrinho";
+.controller("cestaController",function($scope, $http){
+	$scope.titulo = "Cesta";
+
+	$http.get('https://s-shop-test.herokuapp.com/order').success(function(data, status, headers, config){
+		console.log(data);
+		$scope.orders = data;
+		
+	}).error(function(data, status, headers,config){
+
+	});
 })
 
 .controller("adminController",function($scope, $http){

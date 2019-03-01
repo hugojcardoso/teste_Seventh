@@ -1,4 +1,4 @@
 angular.module("meuModulo")
-.controller("carrinhoController",function($scope){
-	$scope.titulo = "Carrinho";
+.controller("cestaController",function($scope){
+	$scope.titulo = "Cesta";
 })

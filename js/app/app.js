@@ -6,9 +6,9 @@ angular.module("meuModulo",['ngRoute'])
 		templateUrl:"templates/home.html",
 		controller:"indexController"
 	})
-	.when("/carrinho",{
-		templateUrl:"templates/carrinho.html",
-		controller:"carrinhoController"
+	.when("/cesta",{
+		templateUrl:"templates/cesta.html",
+		controller:"cestaController"
 	})
 	.when("/admin",{
 		templateUrl:"templates/admin.html",
